@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "Ian Blott - Chrome Extension for a Background Script",
+	"version": "1.0",
+	"description": "A simple starting point for creating background extensions in chrome",
+	"homepage_url": "http://www.blott.com.au",
+
+	"browser_action": {
+		"default_icon":"images/icon16.png"
+	},
+
+	"icons": { 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"src/content.js"
+			]
+		}
+	],
+	
+	"background":{
+		"scripts": [
+			"src/background.js"
+		]
+	}
+}
+
+	
